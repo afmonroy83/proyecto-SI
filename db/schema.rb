@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_15_194333) do
+ActiveRecord::Schema.define(version: 2018_10_15_214558) do
+
+  create_table "courses", force: :cascade do |t|
+    t.string "location", limit: 20
+    t.time "hour"
+    t.integer "idTeacher", limit: 10
+    t.string "courseName", limit: 20
+    t.integer "code", limit: 10
+    t.integer "idMatter", limit: 10
+    t.integer "studentNumber", limit: 2
+    t.integer "idRoom", limit: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "name", limit: 20
