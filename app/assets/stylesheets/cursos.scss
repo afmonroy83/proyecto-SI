@@ -3,6 +3,49 @@ html, body {
       padding: 0;
       width: 100%;
 }
+ 
+body {
+      font-family: "Helvetica Neue",sans-serif;
+      font-weight: lighter;
+      color:#000;
+      background: radial-gradient(shape size at position, start-color,#fff, last-color);
+
+}
+ 
+header {
+      width: 100%;
+      height: 16vh;
+      border-bottom-style: groove;
+
+}
+ .ti{
+
+      color: rgb(36, 86, 119);
+      text-align: center;
+}
+.cur{
+      color: rgb(36, 86, 119)
+}
+
+ 
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+ 
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
 .foot{
     width: 80%;
     margin-top: 2%;
@@ -44,58 +87,6 @@ html, body {
 
 
 }
-.textob{
-
-      border-radius: 10px; 
-      width: 30%;
-      max-width: 500px;
-      height: 5%;
-      margin-left:10%;
-      padding-bottom: 3%;
-
-
-    }
-
-    .iniciar{
-      background:center;
-      width:100%;
-      padding: 5%;
-      padding-left: none;   
-      margin-right: none; 
-      overflow: none;
-      margin-top: 20%;
-      text-align-last: center;
-    }
-
-form {
-margin:0 auto;
-width:80%;
-padding: 5%;
-
-}
-
-input, textarea {
-
-border-radius: 10px;
-margin-left: 95%;
-width:100%;
-height:10%;
-background:rgb(36, 86, 119);
-border:2px solid #f6f6f6;
-padding-right: 10%;
-padding-bottom: 1%;
-margin-top:0px;
-margin-bottom: 0px;
-font-size:20px;
-font-style: oblique; 
-color:#000;
-text-align: right;
-}
-
-input:hover{
-
-      opacity: .6;
-}
 
 #redes2{
     width: 100%;
@@ -105,81 +96,6 @@ input:hover{
     display: block;
     margin-bottom: 0%;
 }
-#boton{
-  background-color: rgb(241,177,24,1);
-  background-size:cover;
-  margin-left:105%;
-  color: #000;
-  width:45%;
-  margin-top: 3%; 
-  height: 5%
-  padding: 3%;
-  padding-right: 5%;  
-  padding-left: 5%;
-  border-radius: 20px;
-  font-size:100%;
-  font-style: unset;
-  font-weight:bold;
-  min-width: 55px;
-  position:static;  
-
-}
-#a1{
-
-  width: 100%;
-  height: 100%;
-  font-family:fantasy;
-  color: #fff;
-  padding: 5%;
-  text-decoration: none;
-  text-align: center;
-  align-content: center;
-
-  }
-
- #boton:hover {
-
-    box-shadow: 0px 0px 20px #fff;
-    background:rgb(36, 86, 119);
-    border-radius:60px;
-
- }
- 
-body {
-      font-family: "Helvetica Neue",sans-serif;
-      font-weight: lighter;
-      color:#000;
-      background: radial-gradient(shape size at position, start-color,#fff, last-color);
-
-}
- 
-header {
-      width: 100%;
-      height: 16vh;
-      border-bottom-style: groove;
-
-}
-
- 
-.content {
-      width: 94%;
-      margin: 4em auto;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: justify;
-}
- 
-.logo {
-      line-height: 60px;
-      position: fixed;
-      float: left;
-      margin: 16px 46px;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-      letter-spacing: 2px;
-}
- 
 nav {
       position: fixed;
       width: 100%;
@@ -189,9 +105,9 @@ nav {
 nav ul {
       line-height: 60px;
       list-style: none;
-      background: rgb(246,177,24,1);
+      background: rgba(246,177,24,1);
       overflow: hidden;
-      color: rgb(246,177,24,1);
+      color: rgba(246,177,24,1);
       padding: 0;
       text-align: right;
       margin: 0;
@@ -200,7 +116,7 @@ nav ul {
 }
  
 nav .black ul {
-      color: rgb(246,177,24,1);
+      color: rgba(246,177,24,1);
       background: rgb(36, 86, 119);
 }
  
@@ -209,12 +125,116 @@ nav ul li {
       padding: 26px 40px;
 
 }
+#boton{
+  background-color: rgba(241,177,24,1);
+  background-size:cover;
+  margin-left:15%;
+  color: #000;
+  width:5%;
+  margin-top: 2%; 	
+  padding-right: 5%;  
+  padding-left: 5%;
+  border-radius: 20px;
+  font-size:100%;
+  font-style: unset;
+  font-weight:bold;
+  min-width: 55px;
+  margin-bottom: -4%;
+  
+
+}
+
+#boton1{
+  background-color: rgba(241,177,24,1);
+  background-size:cover;
+  margin-left:35%;
+  color: #000;
+  width:5%;
+  margin-top: 2%; 
+  margin-bottom: -4.5%;
+  padding-right: 5%;  
+  padding-left: 5%;
+  border-radius: 20px;
+  font-size:100%;
+  font-style: unset;
+  font-weight:bold;
+  min-width: 55px;
+  
+
+}
+#boton2{
+  margin-bottom: 1%;
+  background-color: rgba(241,177,24,1);
+  background-size:contain;
+  margin-left:55%;
+  color: #000;
+  width:5%;
+  margin-top: 2%; 
+  padding-right: 5%;  
+  padding-left: 5%;
+  border-radius: 20px;
+  font-size:100%;
+  font-style: unset;
+  font-weight:bold;
+  min-width: 55px;
+  
+
+}
+#a1{
+
+  width: 100%;
+  height: 100%;
+  font-family:sans-serif;
+  color: #fff;
+  padding: 1%;
+  text-decoration: none;
+  text-align: center;
+  align-content:inherit; 
+
+  }
+
+ #boton:hover,#boton1:hover,#boton2:hover {
+
+    box-shadow: 0px 0px 20px #fff;
+    background:rgb(36, 86, 119);
+    border-radius:60px;
+
+ }
+table{
+      background-color: white;
+      text-align: left;
+      border-collapse: collapse;
+      width: 80%;
+      margin-left: 10%;
+}
+
+th, td{
+      padding: 20px;
+}
+
+thead{
+      background-color: rgb(36, 86, 119);
+      border-bottom: solid 5px #0F362D;
+      color: white;
+}
+
+tr:nth-child(even){
+      background-color: #ddd;
+}
+
+tr:hover td{
+      background-color: rgba(241,177,24,1);
+      color: white;
+}
+
  
 nav ul li a {
       text-decoration: none;
       color: #fff;
       font-size: 16px;
       padding: 50%;
+      padding-top: 30%;
+      padding-bottom: 30%;
 }
  nav ul li:hover a {
       background-color: rgb(36, 86, 119);
@@ -228,7 +248,7 @@ nav ul li a {
 .menu-icon {
       line-height: 60px;
       width: 100%;
-      background:rgb(246,177,24,1);
+      background:rgba(246,177,24,1);
       text-align: right;
       box-sizing: border-box;
       padding: 15px 24px;
@@ -237,22 +257,47 @@ nav ul li a {
       display: none;
 }
 .pie{
-             width:100%;
+            width:100%;
+            height: 100%;
             overflow:hidden;
             background:#000;
             margin-top:1%;
             margin-bottom:0px;
             border-top-style:groove;
 }
- .ti{
-
-      color: rgb(36, 86, 119);
-      text-align: center;
-}
-.cur{
-      color: rgb(36, 86, 119)
-}
+ 
 @media(max-width: 786px) {
+      .p1{ 
+
+    margin-left:3%; 
+    width: 80%;
+    padding: 0%;
+    height: 50%;
+
+    overflow:initial;
+   -webkit-margin-right:1%;
+    display:inline-block;
+
+
+
+}
+.p4{
+      text-align:right; 
+      display:block; 
+      width: 1%;
+}
+#redes{
+
+    width: 1%;
+    height: 1%;
+    margin-bottom: 1%;
+    margin-left: 10%;
+    max-width: 10px;
+
+
+
+}
+
  
       .logo {
             position: fixed;
@@ -285,43 +330,12 @@ nav ul li a {
             display: block;
       }
       nav ul li:hover a {
-      background-color: rgb(246,177,24,1);
+      background-color: rgba(246,177,24,1);
       text-decoration: none;
       color: #fff;
       border-radius: 10px;
       opacity: .9;
       box-shadow: 0px 0px 20px #fff;
-
-
-}
-.p1{ 
-
-    margin-left:3%; 
-    width: 80%;
-    padding: 0%;
-    height: 50%;
-
-    overflow:initial;
-   -webkit-margin-right:1%;
-    display:inline-block;
-
-
-
-}
-.p4{
-      text-align:right; 
-      display:block; 
-      width: 1%;
-}
-#redes{
-
-    width: 1%;
-    height: 1%;
-    margin-bottom: 1%;
-    margin-left: 10%;
-    max-width: 10px;
-
-
 
 }
 nav ul li a {
@@ -333,7 +347,8 @@ nav ul li a {
  
 }
 
- .bl{
+
+.bl{
 
      max-width:80%;
      margin: 2%;
@@ -362,7 +377,7 @@ nav ul li a {
     box-shadow: 0px 0px 20px #ddd;
    
     }
-    .re{
+.re{
 
     background-color: rgb(36, 86, 119);
     width: 95%;
