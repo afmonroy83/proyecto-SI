@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_15_214558) do
+ActiveRecord::Schema.define(version: 2018_10_16_011809) do
+
+  create_table "areas", force: :cascade do |t|
+    t.string "nameArea", limit: 20
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "location", limit: 20
@@ -25,6 +31,25 @@ ActiveRecord::Schema.define(version: 2018_10_15_214558) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "credits", force: :cascade do |t|
+    t.integer "creditNumber", limit: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "faculties", force: :cascade do |t|
+    t.string "facultyName", limit: 20
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.integer "idFaculty", limit: 10
+    t.string "ProgramName", limit: 20
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "students", force: :cascade do |t|
     t.string "name", limit: 20
     t.string "l_name", limit: 20
@@ -32,6 +57,22 @@ ActiveRecord::Schema.define(version: 2018_10_15_214558) do
     t.string "email", limit: 40
     t.integer "idProgram", limit: 10
     t.string "password", limit: 40
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "subjectName", limit: 20
+    t.integer "idArea", limit: 10
+    t.integer "idCredit", limit: 10
+    t.integer "idPensul", limit: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string "name", limit: 20
+    t.string "proffesion", limit: 20
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
