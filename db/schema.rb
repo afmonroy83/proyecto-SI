@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_16_010613) do
+ActiveRecord::Schema.define(version: 2018_10_16_011107) do
 
   create_table "areas", force: :cascade do |t|
     t.string "nameArea", limit: 20
@@ -57,6 +57,15 @@ ActiveRecord::Schema.define(version: 2018_10_16_010613) do
     t.string "email", limit: 40
     t.integer "idProgram", limit: 10
     t.string "password", limit: 40
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "subjectName", limit: 20
+    t.integer "idArea", limit: 10
+    t.integer "idCredit", limit: 10
+    t.integer "idPensul", limit: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
