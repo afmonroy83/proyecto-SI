@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_16_020345) do
+ActiveRecord::Schema.define(version: 2018_10_16_203843) do
 
   create_table "areas", force: :cascade do |t|
     t.string "nameArea", limit: 20
@@ -39,6 +39,23 @@ ActiveRecord::Schema.define(version: 2018_10_16_020345) do
 
   create_table "faculties", force: :cascade do |t|
     t.string "facultyName", limit: 20
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "helpers", force: :cascade do |t|
+    t.integer "idStudent", limit: 10
+    t.integer "idSubject", limit: 10
+    t.integer "period", limit: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pensuls", force: :cascade do |t|
+    t.integer "idProgram", limit: 10
+    t.integer "idStudent", limit: 10
+    t.string "pensulName", limit: 20
+    t.integer "idsubject", limit: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
