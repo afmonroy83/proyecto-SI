@@ -40,7 +40,17 @@
 
             </header>
    <div class="content">
+    <div>
+  <% if signed_in? %>
     <%= yield %>
+    <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+  <% else %>
+      <%= yield %>
+    <%= link_to "Registrarse", new_user_registration_path %>
+    <%= link_to "Ingresar", new_user_session_path %>
+  <% end %>
+</div>
+    
     <section class="re">
                  <ul class="bl">
                      <li class="v"><a href="https://www.ucatolica.edu.co/portal/"title="1"> <%= image_tag( "img1.jpg", :width=>'400', :height=>"400", :alt => "1") %></li></a>
