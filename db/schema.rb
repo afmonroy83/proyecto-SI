@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_16_203843) do
+ActiveRecord::Schema.define(version: 2018_10_16_204438) do
 
   create_table "areas", force: :cascade do |t|
     t.string "nameArea", limit: 20
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(version: 2018_10_16_203843) do
     t.integer "idStudent", limit: 10
     t.integer "idSubject", limit: 10
     t.integer "period", limit: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.integer "idCourse", limit: 10
+    t.integer "idStudent", limit: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
