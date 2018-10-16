@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_15_234001) do
+ActiveRecord::Schema.define(version: 2018_10_15_234847) do
 
   create_table "courses", force: :cascade do |t|
     t.string "location", limit: 20
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 2018_10_15_234001) do
 
   create_table "faculties", force: :cascade do |t|
     t.string "facultyName", limit: 20
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.integer "idFaculty", limit: 10
+    t.string "ProgramName", limit: 20
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
