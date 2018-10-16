@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<h1>Nuevo estudiante</h1>
+<%= form_for new_student do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :nombre %>
+    <%= f.text_field :name %>
+  </div>
+    <div>
+    <%= f.label :apellido %>
+    <%= f.text_field :l_name %>
+  </div>
+   <div>
+    <%= f.label :codigo %>
+    <%= f.number_field :code, step: :any %>
+  </div>
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :idProgram%>
+    <%= f.text_field :idProgram%>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+​
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
+</body>
+</html>
