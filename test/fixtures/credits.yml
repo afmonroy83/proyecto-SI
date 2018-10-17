@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  creditNumber: 1
+  numeroDeCreditos: 1
 
 two:
-  creditNumber: 1
+  numeroDeCreditos: 1

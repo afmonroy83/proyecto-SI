@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_17_054359) do
+ActiveRecord::Schema.define(version: 2018_10_17_212424) do
 
   create_table "areas", force: :cascade do |t|
     t.string "nameArea", limit: 20
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2018_10_17_054359) do
   end
 
   create_table "credits", force: :cascade do |t|
-    t.integer "creditNumber", limit: 1
+    t.integer "numeroDeCreditos", limit: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -66,15 +66,16 @@ ActiveRecord::Schema.define(version: 2018_10_17_054359) do
   end
 
   create_table "programs", force: :cascade do |t|
-    t.integer "idFaculty", limit: 10
-    t.string "ProgramName", limit: 20
+    t.integer "faculty_id"
+    t.string "programName", limit: 20
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["faculty_id"], name: "index_programs_on_faculty_id"
   end
 
   create_table "quarters", force: :cascade do |t|
-    t.string "name", limit: 20
     t.string "address", limit: 40
+    t.string "q_Name", limit: 20
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -104,17 +105,20 @@ ActiveRecord::Schema.define(version: 2018_10_17_054359) do
   end
 
   create_table "subjects", force: :cascade do |t|
-    t.string "subjectName", limit: 20
-    t.integer "idArea", limit: 10
-    t.integer "idCredit", limit: 10
-    t.integer "idPensul", limit: 10
+    t.string "sName", limit: 20
+    t.integer "area_id"
+    t.integer "credit_id"
+    t.integer "program_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_subjects_on_area_id"
+    t.index ["credit_id"], name: "index_subjects_on_credit_id"
+    t.index ["program_id"], name: "index_subjects_on_program_id"
   end
 
   create_table "teachers", force: :cascade do |t|
-    t.string "name", limit: 20
-    t.string "proffesion", limit: 20
+    t.string "teacherName", limit: 20
+    t.string "profesion", limit: 20
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  subjectName: MyString
-  idArea: 1
-  idCredit: 1
-  idPensul: 1
+  sName: MyString
+  area: one
+  credit: one
+  program: one
 
 two:
-  subjectName: MyString
-  idArea: 1
-  idCredit: 1
-  idPensul: 1
+  sName: MyString
+  area: two
+  credit: two
+  program: two
