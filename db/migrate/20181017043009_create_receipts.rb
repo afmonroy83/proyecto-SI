@@ -1,10 +1,10 @@
 class CreateReceipts < ActiveRecord::Migration[5.2]
   def change
     create_table :receipts do |t|
-      t.decimal{10} :value
-      t.string :payForm, limit: 10
-      t.integer :idStudent, limit: 10
-      t.date :dateReceipt
+      t.string :idStudent
+      t.decimal :value
+      t.date :f_generate
+      t.string :T_pay, limit: 10
 
       t.timestamps
     end

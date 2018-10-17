@@ -1,13 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  idHelper: 1
-  valuePay: 
-  monthsNumber: 1
-  total: 
+  name: MyString
 
 two:
-  idHelper: 1
-  valuePay: 
-  monthsNumber: 1
-  total: 
+  name: MyString

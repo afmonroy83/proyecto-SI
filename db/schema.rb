@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_16_204438) do
+ActiveRecord::Schema.define(version: 2018_10_17_043009) do
 
   create_table "areas", force: :cascade do |t|
     t.string "nameArea", limit: 20
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "blocks", force: :cascade do |t|
+    t.string "name", limit: 20
+    t.integer "idQuarters", limit: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,15 +65,6 @@ ActiveRecord::Schema.define(version: 2018_10_16_204438) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pensuls", force: :cascade do |t|
-    t.integer "idProgram", limit: 10
-    t.integer "idStudent", limit: 10
-    t.string "pensulName", limit: 20
-    t.integer "idsubject", limit: 10
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "programs", force: :cascade do |t|
     t.integer "idFaculty", limit: 10
     t.string "ProgramName", limit: 20
@@ -74,13 +72,33 @@ ActiveRecord::Schema.define(version: 2018_10_16_204438) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "quarters", force: :cascade do |t|
+    t.string "name", limit: 20
+    t.string "address", limit: 40
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "receipts", force: :cascade do |t|
+    t.string "idStudent"
+    t.decimal "value"
+    t.date "f_generate"
+    t.string "T_pay", limit: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.integer "idBlock", limit: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "students", force: :cascade do |t|
     t.string "name", limit: 20
     t.string "l_name", limit: 20
-    t.integer "code", limit: 10
-    t.string "email", limit: 40
+    t.integer "idUser", limit: 10
     t.integer "idProgram", limit: 10
-    t.string "password", limit: 40
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -101,6 +119,13 @@ ActiveRecord::Schema.define(version: 2018_10_16_204438) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "treasuries", force: :cascade do |t|
+    t.string "name", limit: 20
+    t.integer "idReceipt", limit: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -111,6 +136,12 @@ ActiveRecord::Schema.define(version: 2018_10_16_204438) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "works", force: :cascade do |t|
+    t.string "name", limit: 20
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  value: 
-  payForm: MyString
-  idStudent: 1
-  dateReceipt: 2018-10-16
+  idStudent: MyString
+  value: 9.99
+  f_generate: 2018-10-16
+  T_pay: MyString
 
 two:
-  value: 
-  payForm: MyString
-  idStudent: 1
-  dateReceipt: 2018-10-16
+  idStudent: MyString
+  value: 9.99
+  f_generate: 2018-10-16
+  T_pay: MyString
