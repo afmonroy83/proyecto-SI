@@ -5,7 +5,7 @@ class CreateCourses < ActiveRecord::Migration[5.2]
       t.time :hour
       t.integer :idTeacher, limit: 10
       t.string :courseName, limit: 20
-      t.integer :code, limit: 10
+      t.integer :idUser, limit: 10
       t.integer :idMatter, limit: 10
       t.integer :studentNumber, limit: 2
       t.integer :idRoom, limit: 10
