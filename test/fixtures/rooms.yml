@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  idBlock: 1
+  block: one
 
 two:
-  idBlock: 1
+  block: two

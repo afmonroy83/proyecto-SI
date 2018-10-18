@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2018_10_17_212424) do
-=======
-ActiveRecord::Schema.define(version: 2018_10_17_043009) do
->>>>>>> parent of cb2b8a4... otro
+ActiveRecord::Schema.define(version: 2018_10_18_014225) do
 
   create_table "areas", force: :cascade do |t|
     t.string "nameArea", limit: 20
@@ -23,10 +19,11 @@ ActiveRecord::Schema.define(version: 2018_10_17_043009) do
   end
 
   create_table "blocks", force: :cascade do |t|
-    t.string "name", limit: 20
-    t.integer "idQuarters", limit: 10
+    t.string "nBlock", limit: 20
+    t.integer "quarter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["quarter_id"], name: "index_blocks_on_quarter_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -34,12 +31,12 @@ ActiveRecord::Schema.define(version: 2018_10_17_043009) do
     t.time "hour"
     t.integer "idTeacher", limit: 10
     t.string "courseName", limit: 20
-    t.integer "code", limit: 10
     t.integer "idMatter", limit: 10
     t.integer "studentNumber", limit: 2
     t.integer "idRoom", limit: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "idStudent", limit: 10
   end
 
   create_table "credits", force: :cascade do |t|
@@ -94,18 +91,21 @@ ActiveRecord::Schema.define(version: 2018_10_17_043009) do
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.integer "idBlock", limit: 10
+    t.integer "block_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["block_id"], name: "index_rooms_on_block_id"
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "name", limit: 20
-    t.string "l_name", limit: 20
-    t.integer "idUser", limit: 10
-    t.integer "idProgram", limit: 10
+    t.string "nStudent", limit: 20
+    t.string "apeStudent", limit: 20
+    t.integer "user_id"
+    t.integer "program_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_students_on_program_id"
+    t.index ["user_id"], name: "index_students_on_user_id"
   end
 
   create_table "subjects", force: :cascade do |t|

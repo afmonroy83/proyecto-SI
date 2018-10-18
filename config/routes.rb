@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :students
+  resources :rooms
+  resources :blocks
   resources :subjects
   resources :credits
   resources :programs
