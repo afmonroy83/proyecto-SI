@@ -15,7 +15,7 @@ class QuartersTest < ApplicationSystemTestCase
     click_on "New Quarter"
 
     fill_in "Address", with: @quarter.address
-    fill_in "Q Name", with: @quarter.q_Name
+    fill_in "Qname", with: @quarter.qName
     click_on "Create Quarter"
 
     assert_text "Quarter was successfully created"
@@ -27,7 +27,7 @@ class QuartersTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Address", with: @quarter.address
-    fill_in "Q Name", with: @quarter.q_Name
+    fill_in "Qname", with: @quarter.qName
     click_on "Update Quarter"
 
     assert_text "Quarter was successfully updated"

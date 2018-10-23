@@ -16,6 +16,7 @@ class ProgramsTest < ApplicationSystemTestCase
 
     fill_in "Faculty", with: @program.faculty_id
     fill_in "Programname", with: @program.programName
+    fill_in "Tipep", with: @program.tipeP
     click_on "Create Program"
 
     assert_text "Program was successfully created"
@@ -28,6 +29,7 @@ class ProgramsTest < ApplicationSystemTestCase
 
     fill_in "Faculty", with: @program.faculty_id
     fill_in "Programname", with: @program.programName
+    fill_in "Tipep", with: @program.tipeP
     click_on "Update Program"
 
     assert_text "Program was successfully updated"

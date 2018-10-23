@@ -1,10 +1,10 @@
 class Program < ApplicationRecord
   belongs_to :faculty
-	has_many :subjects, dependent: :destroy
-   	validates :programName, presence: true
+  has_many :students, dependent: :destroy
+  validates :programName, presence: true
+	def to_s
+ 		
+		programName
 
-  def to_s
-  	programName
-  end
-
-end	
+	end
+end

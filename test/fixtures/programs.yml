@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  faculty: one
   programName: MyString
+  tipeP: MyString
+  faculty: one
 
 two:
-  faculty: two
   programName: MyString
+  tipeP: MyString
+  faculty: two

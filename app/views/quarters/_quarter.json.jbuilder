@@ -1,2 +1,2 @@
-json.extract! quarter, :id, :address, :q_Name, :created_at, :updated_at
+json.extract! quarter, :id, :qName, :address, :created_at, :updated_at
 json.url quarter_url(quarter, format: :json)

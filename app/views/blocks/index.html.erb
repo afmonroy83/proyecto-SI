@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Nblock</th>
+      <th>Bnum</th>
       <th>Quarter</th>
       <th colspan="3"></th>
     </tr>
@@ -14,7 +14,7 @@
   <tbody>
     <% @blocks.each do |block| %>
       <tr>
-        <td><%= block.nBlock %></td>
+        <td><%= block.bNum %></td>
         <td><%= block.quarter %></td>
         <td><%= link_to 'Show', block %></td>
         <td><%= link_to 'Edit', edit_block_path(block) %></td>

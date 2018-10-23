@@ -69,6 +69,6 @@ class QuartersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quarter_params
-      params.require(:quarter).permit(:address, :q_Name)
+      params.require(:quarter).permit(:qName, :address)
     end
 end

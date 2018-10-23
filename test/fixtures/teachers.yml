@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  teacherName: MyString
+  tName: MyString
+  tLastname: MyString
   profesion: MyString
 
 two:
-  teacherName: MyString
+  tName: MyString
+  tLastname: MyString
   profesion: MyString

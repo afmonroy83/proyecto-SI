@@ -17,7 +17,7 @@ class QuartersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create quarter" do
     assert_difference('Quarter.count') do
-      post quarters_url, params: { quarter: { address: @quarter.address, q_Name: @quarter.q_Name } }
+      post quarters_url, params: { quarter: { address: @quarter.address, qName: @quarter.qName } }
     end
 
     assert_redirected_to quarter_url(Quarter.last)
@@ -34,7 +34,7 @@ class QuartersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update quarter" do
-    patch quarter_url(@quarter), params: { quarter: { address: @quarter.address, q_Name: @quarter.q_Name } }
+    patch quarter_url(@quarter), params: { quarter: { address: @quarter.address, qName: @quarter.qName } }
     assert_redirected_to quarter_url(@quarter)
   end
 

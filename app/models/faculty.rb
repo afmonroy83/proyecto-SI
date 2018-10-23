@@ -3,8 +3,8 @@ class Faculty < ApplicationRecord
 	validates :facultyName, presence: true
 
 	def to_s
+ 
 		facultyName
+
 	end
-
-
 end

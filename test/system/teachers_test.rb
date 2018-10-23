@@ -15,7 +15,8 @@ class TeachersTest < ApplicationSystemTestCase
     click_on "New Teacher"
 
     fill_in "Profesion", with: @teacher.profesion
-    fill_in "Teachername", with: @teacher.teacherName
+    fill_in "Tlastname", with: @teacher.tLastname
+    fill_in "Tname", with: @teacher.tName
     click_on "Create Teacher"
 
     assert_text "Teacher was successfully created"
@@ -27,7 +28,8 @@ class TeachersTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Profesion", with: @teacher.profesion
-    fill_in "Teachername", with: @teacher.teacherName
+    fill_in "Tlastname", with: @teacher.tLastname
+    fill_in "Tname", with: @teacher.tName
     click_on "Update Teacher"
 
     assert_text "Teacher was successfully updated"

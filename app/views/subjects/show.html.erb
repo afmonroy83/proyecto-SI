@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Sname:</strong>
-  <%= @subject.sName %>
+  <strong>Subname:</strong>
+  <%= @subject.subName %>
 </p>
 
 <p>
@@ -11,13 +11,18 @@
 </p>
 
 <p>
-  <strong>Credit:</strong>
-  <%= @subject.credit %>
+  <strong>Credits:</strong>
+  <%= @subject.credits %>
 </p>
 
 <p>
   <strong>Program:</strong>
   <%= @subject.program %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @subject.price %>
 </p>
 
 <%= link_to 'Edit', edit_subject_path(@subject) %> |

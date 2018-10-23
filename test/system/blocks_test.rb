@@ -14,7 +14,7 @@ class BlocksTest < ApplicationSystemTestCase
     visit blocks_url
     click_on "New Block"
 
-    fill_in "Nblock", with: @block.nBlock
+    fill_in "Bnum", with: @block.bNum
     fill_in "Quarter", with: @block.quarter_id
     click_on "Create Block"
 
@@ -26,7 +26,7 @@ class BlocksTest < ApplicationSystemTestCase
     visit blocks_url
     click_on "Edit", match: :first
 
-    fill_in "Nblock", with: @block.nBlock
+    fill_in "Bnum", with: @block.bNum
     fill_in "Quarter", with: @block.quarter_id
     click_on "Update Block"
 

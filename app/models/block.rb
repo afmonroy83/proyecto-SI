@@ -1,9 +1,11 @@
 class Block < ApplicationRecord
   belongs_to :quarter
-  has_many :rooms, dependent: :destroy
-  validates :nBlock, presence: true
+  	has_many :rooms, dependent: :destroy
+	validates :bNum, presence: true
 
-  def to_s
-  	nBlock 
-  end
+	def to_s
+ 
+		bNum
+
+	end
 end

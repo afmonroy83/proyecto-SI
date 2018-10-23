@@ -5,10 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Sname</th>
+      <th>Subname</th>
       <th>Area</th>
-      <th>Credit</th>
+      <th>Credits</th>
       <th>Program</th>
+      <th>Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +17,11 @@
   <tbody>
     <% @subjects.each do |subject| %>
       <tr>
-        <td><%= subject.sName %></td>
+        <td><%= subject.subName %></td>
         <td><%= subject.area %></td>
-        <td><%= subject.credit %></td>
+        <td><%= subject.credits %></td>
         <td><%= subject.program %></td>
+        <td><%= subject.price %></td>
         <td><%= link_to 'Show', subject %></td>
         <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
         <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>

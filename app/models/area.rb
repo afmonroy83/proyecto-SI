@@ -1,10 +1,10 @@
 class Area < ApplicationRecord
-
 	has_many :subjects, dependent: :destroy
-	validates :nameArea, presence: true
+	validates :arName, presence: true
 
- def to_s
-  	nameArea
- end
+	def to_s
+ 
+		arName
 
+	end
 end

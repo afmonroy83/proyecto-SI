@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  sName: MyString
+  subName: MyString
   area: one
-  credit: one
+  credits: 1
   program: one
+  price: 9.99
 
 two:
-  sName: MyString
+  subName: MyString
   area: two
-  credit: two
+  credits: 1
   program: two
+  price: 9.99

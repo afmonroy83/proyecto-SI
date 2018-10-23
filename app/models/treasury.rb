@@ -1,2 +1,0 @@
-class Treasury < ApplicationRecord
-end

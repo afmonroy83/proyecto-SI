@@ -1,8 +1,10 @@
 class Quarter < ApplicationRecord
 	has_many :blocks, dependent: :destroy
-	validates :q_Name, presence: true
+	validates :qName, presence: true
 
 	def to_s
-		q_Name
+ 
+		qName
+
 	end
 end

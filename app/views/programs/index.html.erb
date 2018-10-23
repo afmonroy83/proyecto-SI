@@ -5,8 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Faculty</th>
       <th>Programname</th>
+      <th>Tipep</th>
+      <th>Faculty</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +15,9 @@
   <tbody>
     <% @programs.each do |program| %>
       <tr>
-        <td><%= program.faculty %></td>
         <td><%= program.programName %></td>
+        <td><%= program.tipeP %></td>
+        <td><%= program.faculty %></td>
         <td><%= link_to 'Show', program %></td>
         <td><%= link_to 'Edit', edit_program_path(program) %></td>
         <td><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></td>

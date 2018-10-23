@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nStudent: MyString
-  apeStudent: MyString
+  studentName: MyString
+  lastName: MyString
   user: one
   program: one
 
 two:
-  nStudent: MyString
-  apeStudent: MyString
+  studentName: MyString
+  lastName: MyString
   user: two
   program: two

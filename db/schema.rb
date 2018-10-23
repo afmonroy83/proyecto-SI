@@ -10,39 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_18_014225) do
+ActiveRecord::Schema.define(version: 2018_10_22_033203) do
 
   create_table "areas", force: :cascade do |t|
-    t.string "nameArea", limit: 20
+    t.string "arName", limit: 20
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "blocks", force: :cascade do |t|
-    t.string "nBlock", limit: 20
+    t.string "bNum", limit: 4
     t.integer "quarter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["quarter_id"], name: "index_blocks_on_quarter_id"
-  end
-
-  create_table "courses", force: :cascade do |t|
-    t.string "location", limit: 20
-    t.time "hour"
-    t.integer "idTeacher", limit: 10
-    t.string "courseName", limit: 20
-    t.integer "idMatter", limit: 10
-    t.integer "studentNumber", limit: 2
-    t.integer "idRoom", limit: 10
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "idStudent", limit: 10
-  end
-
-  create_table "credits", force: :cascade do |t|
-    t.integer "numeroDeCreditos", limit: 2
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "faculties", force: :cascade do |t|
@@ -51,41 +32,18 @@ ActiveRecord::Schema.define(version: 2018_10_18_014225) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "helpers", force: :cascade do |t|
-    t.integer "idStudent", limit: 10
-    t.integer "idSubject", limit: 10
-    t.integer "period", limit: 10
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "notes", force: :cascade do |t|
-    t.integer "idCourse", limit: 10
-    t.integer "idStudent", limit: 10
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "programs", force: :cascade do |t|
-    t.integer "faculty_id"
     t.string "programName", limit: 20
+    t.string "tipeP", limit: 20
+    t.integer "faculty_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["faculty_id"], name: "index_programs_on_faculty_id"
   end
 
   create_table "quarters", force: :cascade do |t|
+    t.string "qName", limit: 20
     t.string "address", limit: 40
-    t.string "q_Name", limit: 20
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "receipts", force: :cascade do |t|
-    t.string "idStudent"
-    t.decimal "value"
-    t.date "f_generate"
-    t.string "T_pay", limit: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -98,8 +56,8 @@ ActiveRecord::Schema.define(version: 2018_10_18_014225) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string "nStudent", limit: 20
-    t.string "apeStudent", limit: 20
+    t.string "studentName", limit: 20
+    t.string "lastName", limit: 20
     t.integer "user_id"
     t.integer "program_id"
     t.datetime "created_at", null: false
@@ -109,27 +67,21 @@ ActiveRecord::Schema.define(version: 2018_10_18_014225) do
   end
 
   create_table "subjects", force: :cascade do |t|
-    t.string "sName", limit: 20
+    t.string "subName", limit: 20
     t.integer "area_id"
-    t.integer "credit_id"
+    t.integer "credits", limit: 2
     t.integer "program_id"
+    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_subjects_on_area_id"
-    t.index ["credit_id"], name: "index_subjects_on_credit_id"
     t.index ["program_id"], name: "index_subjects_on_program_id"
   end
 
   create_table "teachers", force: :cascade do |t|
-    t.string "teacherName", limit: 20
-    t.string "profesion", limit: 20
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "treasuries", force: :cascade do |t|
-    t.string "name", limit: 20
-    t.integer "idReceipt", limit: 10
+    t.string "tName", limit: 20
+    t.string "tLastname", limit: 20
+    t.string "profesion", limit: 40
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -144,12 +96,6 @@ ActiveRecord::Schema.define(version: 2018_10_18_014225) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "works", force: :cascade do |t|
-    t.string "name", limit: 20
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

@@ -15,9 +15,10 @@ class SubjectsTest < ApplicationSystemTestCase
     click_on "New Subject"
 
     fill_in "Area", with: @subject.area_id
-    fill_in "Credit", with: @subject.credit_id
+    fill_in "Credits", with: @subject.credits
+    fill_in "Price", with: @subject.price
     fill_in "Program", with: @subject.program_id
-    fill_in "Sname", with: @subject.sName
+    fill_in "Subname", with: @subject.subName
     click_on "Create Subject"
 
     assert_text "Subject was successfully created"
@@ -29,9 +30,10 @@ class SubjectsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Area", with: @subject.area_id
-    fill_in "Credit", with: @subject.credit_id
+    fill_in "Credits", with: @subject.credits
+    fill_in "Price", with: @subject.price
     fill_in "Program", with: @subject.program_id
-    fill_in "Sname", with: @subject.sName
+    fill_in "Subname", with: @subject.subName
     click_on "Update Subject"
 
     assert_text "Subject was successfully updated"
